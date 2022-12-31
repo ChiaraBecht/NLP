@@ -21,4 +21,4 @@ corpus = CSVClassificationCorpus(data_folder,
                                         #test_file= 'test.csv', 
                                         label_type=label_type)
 
-print(corpus.get_all_sentences()[0])
+print(corpus)
