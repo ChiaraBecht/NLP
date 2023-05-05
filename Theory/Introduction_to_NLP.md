@@ -12,7 +12,7 @@ Generally, these tasks are quite complex and seem like magic to the user. This r
 
 ## How does the magic of NLP comes to life?
 ### What is NLP?
-NLP is a branch of AI, linguistics and software engineering that aims to make machines understand human language. Understanding of human language can be broken down in the following subtasks:
+NLP is a branch of AI, linguistics and software engineering that aims to make machines understand human language. Generally it is an interdisciplinary field which makes it hard to grasp for newbies. Understanding of human language can be broken down in the following subtasks:
 - detect the language (e.g. English, French, German, Dutch, Chinese) and can i understand this language?
 - detect sentences within a text
 - detect words within a sentence
@@ -42,6 +42,9 @@ These downstream tasks are sequence tagging tasks.
 
 
 ### Text vectorization
+Text vectorization describes the task of representing words in a numerical way that can be used as model input. To vectorize texts, all words that occur in that text or better that are important for a certain language need to be represented in a numerical fashion. The collection of words that we need to encode in order to allow a model handling a text in a certain language is called vocabulary. There are different ways of achieving numerical representations. One hot encodings assign vectors to each word in the vocabulary. These vecors are sparse and their dimensionality equals the number of words in the vocabulary. The vector has a 1 at the position of the vector the word stands in the vocabulary list all other entries are 0. This representation provides an unique word vector for each word in the vocabulary, however no conclusions about relationship among words can be drawn. 
+
+Another way of deriving numerical representations are embeddings. This method uses properties of words to compute dense word vectors that capture relationships amongst words but as well provide an unique numerical representation for each word in the vocabulary. The length of the vectors is fixed and can be chosen by the user. The slideshow provides an example that explains this method more visually. The more words the vocabulary contains the more categories can be found but as well more annotation work is necessary. Therefore, this step shall be automated which is possible using neural networks. (I will keep technical details short here, maybe i will dig into this topic more when i have gained a better understanding).
 
 ### Powerful NLP models
 
