@@ -46,6 +46,18 @@ Text vectorization describes the task of representing words in a numerical way t
 
 Another way of deriving numerical representations are embeddings. This method uses properties of words to compute dense word vectors that capture relationships amongst words but as well provide an unique numerical representation for each word in the vocabulary. The length of the vectors is fixed and can be chosen by the user. The slideshow provides an example that explains this method more visually. The more words the vocabulary contains the more categories can be found but as well more annotation work is necessary. Therefore, this step shall be automated which is possible using neural networks. (I will keep technical details short here, maybe i will dig into this topic more when i have gained a better understanding).
 
+For now I want to dig a bit more into the idea of embeddings in general and come back to the how we produce them later. Embeddings provide us with a fixed length dense vector for each word in vocabulary. When we study a couple of words such as woman, girl, boy, man, king and queen we find that the following equation holds:
+
+**King - Man + Woman ~= Queen**
+
+This equation is the Hello World of NLP and proves at the same time that models are able to find numerical representations that indeed cover some sort of properties that relate words. This equation can be rewritten into the following statement:
+
+**Word A relates to Word B AS Word C relates to Word D**
+
+One of the small NLP tools I have implemented (following the book about flair, see in the README references) is an analogy solver that computes Word D given an input of Word A, Word B and Word C. You can find the analogy solver in this repository.
+
+Over time, many different embedding methods were published. One of the first embeddings (not the initial one) is Word2Vec by Mikolov et al. This strategy provides an embedding for every word in the vocabulary list. The embeddings are derived by comparing neighboring words and their relationships. So words that often co-occur do share a relationship that words that never co-occur don't. One of the limitations is that out of vocabulary words may occur. If the vocabulary does not cover all words of a language or new words can be created by pasting two existing words together there won't be an embedding for these words available. One embedding method that overcame this problem is the FastText method by Bojanowski et al. They extended the embeddings by creating subwords and adding embeddings for those. As for the previous method relationships between words are derived from neighboring words. One of the latest embedding methods is BERT embedding. These approach is completely different from the already mentioned ones. The embeddings are depending on context. This means that a word can have different embeddings depending on the context it occurs in. The embeddings are derived by comparing pairs of sentences.
+
 ### Powerful NLP models
 
 ### Application for my project
