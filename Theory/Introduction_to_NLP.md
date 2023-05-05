@@ -10,7 +10,8 @@ To date, many NLP tools are used on a daily basis. Some examples are given in th
 
 Generally, these tasks are quite complex and seem like magic to the user. This repository aims to dig deeper, understand and explain some core concepts as well as some important state-of-the-art models and further shows some custom use cases from own projects.
 
-## What is NLP? / How does the magic of NLP comes to life?
+## How does the magic of NLP comes to life?
+### What is NLP?
 NLP is a branch of AI, linguistics and software engineering that aims to make machines understand human language. Understanding of human language can be broken down in the following subtasks:
 - detect the language (e.g. English, French, German, Dutch, Chinese) and can i understand this language?
 - detect sentences within a text
@@ -35,5 +36,25 @@ These three steps are general building blocks of basic models. Each model needs 
 - Chunking: Identify small phrases, such as noun phrases, that behave like a single unit
 - Stemming and Lemmatization: Text normalisation aka reducing words to their base form. Simple approach cut off the pre- and/or suffixes (= stemming), Lemmatization considers context especially POS for distinguishing a base form
 
-These downstream tasks are sequence tagging tasks. 
-- Text Classification: assign categories to texts, Applications: spam filtering, language identification, sentiment analysis.
+These downstream tasks are sequence tagging tasks.
+
+- Text Classification: assign categories to texts, Applications: spam filtering, language identification, sentiment analysis, question answering.
+
+
+### Text vectorization
+
+### Powerful NLP models
+
+### Application for my project
+The project i was using NLP for is currently under embargo until it is published. I have conducted this project as my master thesis. The project aims to built a Knowledge Graph from all abstracts found on PubMed using NLP. In short I have worked on sentiment analysis based on verbs in the biomedical context. I have accomplished this with using spaCy and a custom algorithm. Furthermore, I have customized a model that classifies the authors confidence of reported findings. For this part I have worked with the flair library. More details can be requested.
+
+## Concluding Remarks
+### Limitations
+The limitations concern the applications i have built for the project.
+
+### My favourite NLP tools
+- spaCy and ScispaCy: outstanding performance for Lemmatization, with ScispaCy models strong on Biomedical sequence tagging tasks
+- flair: strong on embeddings, they have their own embedding method as well as many third party embeddings. Interface for third-party mmodels to be used especially for text classification
+- TextBlob: state-of-the-art sentiment analyis
+- NLTK: NLP library covering broad spectrum of NLP tasks
+- GENSIM: topic modelling (special type of downstream task)
