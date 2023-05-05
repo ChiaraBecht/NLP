@@ -8,7 +8,10 @@ To date, many NLP tools are used on a daily basis. Some examples are given in th
 - automatic emotion detection and customer reviews via sentiment analysis 
 - Chatbots which are powerful text generation tools that answer a broad range of user questions. They can be specialised to a specific topic or general
 
-## What is NLP?
+Generally, these tasks are quite complex and seem like magic to the user. This repository aims to dig deeper, understand and explain some core concepts as well as some important state-of-the-art models and further shows some custom use cases from own projects.
+
+## What is NLP? / How does the magic of NLP comes to life?
+
 NLP is a branch of AI, linguistics and software engineering that aims to make machines understand human language. Understanding of human language can be broken down in the following subtasks:
 - detect the language (e.g. English, French, German, Dutch, Chinese) and can i understand this language?
 - detect sentences within a text
