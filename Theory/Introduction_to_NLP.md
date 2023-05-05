@@ -59,6 +59,19 @@ One of the small NLP tools I have implemented (following the book about flair, s
 Over time, many different embedding methods were published. One of the first embeddings (not the initial one) is Word2Vec by Mikolov et al. This strategy provides an embedding for every word in the vocabulary list. The embeddings are derived by comparing neighboring words and their relationships. So words that often co-occur do share a relationship that words that never co-occur don't. One of the limitations is that out of vocabulary words may occur. If the vocabulary does not cover all words of a language or new words can be created by pasting two existing words together there won't be an embedding for these words available. One embedding method that overcame this problem is the FastText method by Bojanowski et al. They extended the embeddings by creating subwords and adding embeddings for those. As for the previous method relationships between words are derived from neighboring words. One of the latest embedding methods is BERT embedding. These approach is completely different from the already mentioned ones. The embeddings are depending on context. This means that a word can have different embeddings depending on the context it occurs in. The embeddings are derived by comparing pairs of sentences.
 
 ### Powerful NLP models
+Three models that are currently used (among others) are ELMO by Allen AI, BERT by Google and Open-GPT by OpenAI. Especially, BERT and GPT have revolutionized the field and yield performances that seem like magic to their users. The best known use case of GPT models is probably ChatGPT. 
+
+In the following BERT and GPT are introduced and compared based on the model Architecture, the tasks they conduct, the training data and their output. 
+|                      | BERT | GPT |
+| ---------------------| :------: | :--:|
+| Model Architecture   | bidirectiona Transformer model*  | undirectional (left-sided) Transformer model*  |
+| Common tasks         | Supervised tasks such as text classification | unsupervised tasks, such as text generation |
+| Training data        | masked language modelling, next sentence prediction | language modelling |
+| Output               | fixed length embeddings for downstream NLP tasks | Sequence of tokens of variable length |
+
+* Transformers: specific model architecture unit consisting of encoder decoder blocks (more details may follow)
+
+As we see, the two models differ in the tasks and output they generate. GPT models are well known at the moment due to their surprisingly great performance on producing coherent text that answers all types of questions. BERT models are often used as well however the applications are not directly obvious to the broad mass of users.
 
 ### Application for my project
 The project i was using NLP for is currently under embargo until it is published. I have conducted this project as my master thesis. The project aims to built a Knowledge Graph from all abstracts found on PubMed using NLP. In short I have worked on sentiment analysis based on verbs in the biomedical context. I have accomplished this with using spaCy and a custom algorithm. Furthermore, I have customized a model that classifies the authors confidence of reported findings. For this part I have worked with the flair library. More details can be requested.
